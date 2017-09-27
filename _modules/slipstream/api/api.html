@@ -37,7 +37,7 @@
         <link rel="up" title="Module code" href="../../index.html"/> 
 
   
-  <script src="_static/js/modernizr.min.js"></script>
+  <script src="../../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -47,17 +47,27 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
 
-        
-          <a href="../../../index.html" class="icon icon-home"> SlipStream Python API
-        
+          
+            <a href="../../../index.html" class="icon icon-home"> SlipStream Python API
+          
 
-        
-        </a>
+          
+          </a>
 
-        
+          
+            
+            
+              <div class="version">
+                0.8
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -66,19 +76,19 @@
   </form>
 </div>
 
-        
-      </div>
+          
+        </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+            
+            
+                <!-- Local TOC -->
+                <div class="local-toc"></div>
+            
           
-              <!-- Local TOC -->
-              <div class="local-toc"></div>
-          
-        
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -93,7 +103,13 @@
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../../../index.html">Docs</a> &raquo;</li>
       
@@ -108,7 +124,8 @@
   </ul>
   <hr/>
 </div>
-          <div role="main" class="document">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <h1>Source code for slipstream.api.api</h1><div class="highlight"><pre>
 <span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span>
@@ -136,7 +153,7 @@
 <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
     <span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
 
-<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
 <span class="n">DEFAULT_ENDPOINT</span> <span class="o">=</span> <span class="s1">&#39;https://nuv.la&#39;</span>
 <span class="n">DEFAULT_COOKIE_FILE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~/.slipstream/cookies.txt&#39;</span><span class="p">)</span>
@@ -170,7 +187,7 @@
 <span class="k">class</span> <span class="nc">SlipStreamError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reason</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">SlipStreamError</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">reason</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">SlipStreamError</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">reason</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reason</span> <span class="o">=</span> <span class="n">reason</span>
 
 
@@ -178,7 +195,7 @@
     <span class="sd">&quot;&quot;&quot;A ``requests.Session`` subclass implementing a file-based session store.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cookie_file</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">SessionStore</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">SessionStore</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">cookie_file</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">cookie_file</span> <span class="o">=</span> <span class="n">DEFAULT_COOKIE_FILE</span>
         <span class="n">cookie_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">cookie_file</span><span class="p">)</span>
@@ -677,21 +694,21 @@
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Invalid type &quot;</span><span class="si">{}</span><span class="s1">&quot; for &quot;</span><span class="si">{}</span><span class="s1">&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">obj</span><span class="p">),</span> <span class="n">obj_name</span><span class="p">))</span>
 
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">_convert_clouds_to_raw_params</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">clouds</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">cls</span><span class="o">.</span><span class="n">_convert_per_node_parameter_to_raw_params</span><span class="p">(</span><span class="s1">&#39;cloudservice&#39;</span><span class="p">,</span> <span class="n">clouds</span><span class="p">,</span> <span class="n">allowed_types</span><span class="o">=</span><span class="n">string_types</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_convert_clouds_to_raw_params</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">clouds</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_convert_per_node_parameter_to_raw_params</span><span class="p">(</span><span class="s1">&#39;cloudservice&#39;</span><span class="p">,</span> <span class="n">clouds</span><span class="p">,</span> <span class="n">allowed_types</span><span class="o">=</span><span class="n">string_types</span><span class="p">)</span>
 
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">_convert_multiplicity_to_raw_params</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">multiplicity</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">cls</span><span class="o">.</span><span class="n">_convert_per_node_parameter_to_raw_params</span><span class="p">(</span><span class="s1">&#39;multiplicity&#39;</span><span class="p">,</span> <span class="n">multiplicity</span><span class="p">,</span>
+    <span class="k">def</span> <span class="nf">_convert_multiplicity_to_raw_params</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">multiplicity</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_convert_per_node_parameter_to_raw_params</span><span class="p">(</span><span class="s1">&#39;multiplicity&#39;</span><span class="p">,</span> <span class="n">multiplicity</span><span class="p">,</span>
                                                              <span class="n">allowed_types</span><span class="o">=</span><span class="p">(</span><span class="n">integer_types</span><span class="p">,</span> <span class="n">string_types</span><span class="p">))</span>
 
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">_convert_tolerate_failures_to_raw_params</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">tolerate_failures</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">cls</span><span class="o">.</span><span class="n">_convert_per_node_parameter_to_raw_params</span><span class="p">(</span><span class="s1">&#39;max-provisioning-failures&#39;</span><span class="p">,</span> <span class="n">tolerate_failures</span><span class="p">,</span>
+    <span class="k">def</span> <span class="nf">_convert_tolerate_failures_to_raw_params</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">tolerate_failures</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_convert_per_node_parameter_to_raw_params</span><span class="p">(</span><span class="s1">&#39;max-provisioning-failures&#39;</span><span class="p">,</span> <span class="n">tolerate_failures</span><span class="p">,</span>
                                                              <span class="n">allowed_types</span><span class="o">=</span><span class="p">(</span><span class="n">integer_types</span><span class="p">,</span> <span class="n">string_types</span><span class="p">))</span>
 
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">_convert_per_node_parameter_to_raw_params</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">parameter_name</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">allowed_types</span><span class="o">=</span><span class="p">(</span><span class="n">string_types</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span>
+    <span class="k">def</span> <span class="nf">_convert_per_node_parameter_to_raw_params</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">parameter_name</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">allowed_types</span><span class="o">=</span><span class="p">(</span><span class="n">string_types</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span>
                                                   <span class="n">allow_no_node</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="n">raw_params</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
 
@@ -700,18 +717,18 @@
 
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">parameters</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
             <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">parameters</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-                <span class="n">cls</span><span class="o">.</span><span class="n">_check_type</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">:</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">parameter_name</span><span class="p">),</span> <span class="n">value</span><span class="p">,</span> <span class="n">allowed_types</span><span class="p">)</span>
+                <span class="bp">cls</span><span class="o">.</span><span class="n">_check_type</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">:</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">parameter_name</span><span class="p">),</span> <span class="n">value</span><span class="p">,</span> <span class="n">allowed_types</span><span class="p">)</span>
                 <span class="n">raw_params</span><span class="p">[</span><span class="s1">&#39;parameter--node--</span><span class="si">{}</span><span class="s1">--</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">parameter_name</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
         <span class="k">elif</span> <span class="n">allow_no_node</span><span class="p">:</span>
-            <span class="n">cls</span><span class="o">.</span><span class="n">_check_type</span><span class="p">(</span><span class="n">parameter_name</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">allowed_types</span><span class="p">)</span>
+            <span class="bp">cls</span><span class="o">.</span><span class="n">_check_type</span><span class="p">(</span><span class="n">parameter_name</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">allowed_types</span><span class="p">)</span>
             <span class="n">raw_params</span><span class="p">[</span><span class="s1">&#39;parameter--</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">parameter_name</span><span class="p">)]</span> <span class="o">=</span> <span class="n">parameters</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">cls</span><span class="o">.</span><span class="n">_check_type</span><span class="p">(</span><span class="n">parameter_name</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span>
+            <span class="bp">cls</span><span class="o">.</span><span class="n">_check_type</span><span class="p">(</span><span class="n">parameter_name</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="n">raw_params</span>
 
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">_convert_parameters_to_raw_params</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">parameters</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_convert_parameters_to_raw_params</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">parameters</span><span class="p">):</span>
         <span class="n">raw_params</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
 
         <span class="k">if</span> <span class="n">parameters</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -723,7 +740,7 @@
                 <span class="k">for</span> <span class="n">parameter_name</span><span class="p">,</span> <span class="n">parameter_value</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
                     <span class="n">raw_params</span><span class="p">[</span><span class="s1">&#39;parameter--node--</span><span class="si">{}</span><span class="s1">--</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">parameter_name</span><span class="p">)]</span> <span class="o">=</span> <span class="n">parameter_value</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">cls</span><span class="o">.</span><span class="n">GLOBAL_PARAMETERS</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">GLOBAL_PARAMETERS</span><span class="p">:</span>
                     <span class="c1"># Redefine a global parameter</span>
                     <span class="n">raw_params</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
                 <span class="k">else</span><span class="p">:</span>
@@ -736,6 +753,7 @@
 
 </pre></div>
 
+           </div>
           </div>
           <footer>
   
@@ -745,9 +763,10 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, SixSq.
+
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 

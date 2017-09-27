@@ -46,17 +46,27 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
 
-        
-          <a href="#" class="icon icon-home"> SlipStream Python API
-        
+          
+            <a href="#" class="icon icon-home"> SlipStream Python API
+          
 
-        
-        </a>
+          
+          </a>
 
-        
+          
+            
+            
+              <div class="version">
+                0.8
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -65,25 +75,25 @@
   </form>
 </div>
 
-        
-      </div>
+          
+        </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
-          
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
+            
+            
+                <!-- Local TOC -->
+                <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">SlipStream Python API documentation</a><ul>
 </ul>
 </li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
 </div>
+            
           
-        
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -98,7 +108,13 @@
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="#">Docs</a> &raquo;</li>
       
@@ -106,14 +122,15 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/index.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
   </ul>
   <hr/>
 </div>
-          <div role="main" class="document">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="slipstream-python-api-documentation">
 <h1>SlipStream Python API documentation<a class="headerlink" href="#slipstream-python-api-documentation" title="Permalink to this headline">¶</a></h1>
@@ -140,8 +157,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>path</strong> (<em>str</em>) &#8211; The path to a component</li>
-<li><strong>cloud</strong> (<em>str</em>) &#8211; The Cloud on which to build the component. If None, the user default Cloud will be used.</li>
+<li><strong>path</strong> (<em>str</em>) – The path to a component</li>
+<li><strong>cloud</strong> (<em>str</em>) – The Cloud on which to build the component. If None, the user default Cloud will be used.</li>
 </ul>
 </td>
 </tr>
@@ -158,26 +175,26 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>username</strong> (<em>str</em>) &#8211; The user&#8217;s username (need to be unique)</li>
-<li><strong>password</strong> (<em>str</em>) &#8211; The user&#8217;s password</li>
-<li><strong>email</strong> (<em>str</em>) &#8211; The user&#8217;s email address</li>
-<li><strong>first_name</strong> (<em>str</em>) &#8211; The user&#8217;s first name</li>
-<li><strong>last_name</strong> (<em>str</em>) &#8211; The user&#8217;s last name</li>
-<li><strong>organization</strong> (<em>str</em>) &#8211; The user&#8217;s organization/company</li>
-<li><strong>roles</strong> (<em>list</em>) &#8211; The user&#8217;s roles</li>
-<li><strong>privileged</strong> (<em>bool</em>) &#8211; true to create a privileged user, false otherwise</li>
-<li><strong>default_cloud</strong> (<em>str</em>) &#8211; The user&#8217;s default Cloud</li>
-<li><strong>default_keep_running</strong> (<em>'always' or 'never' or 'on-success' or 'on-error'</em>) &#8211; The user&#8217;s default setting for keep-running.</li>
-<li><strong>ssh_public_keys</strong> (<em>str</em>) &#8211; The SSH public keys to inject into deployed instances.
+<li><strong>username</strong> (<em>str</em>) – The user’s username (need to be unique)</li>
+<li><strong>password</strong> (<em>str</em>) – The user’s password</li>
+<li><strong>email</strong> (<em>str</em>) – The user’s email address</li>
+<li><strong>first_name</strong> (<em>str</em>) – The user’s first name</li>
+<li><strong>last_name</strong> (<em>str</em>) – The user’s last name</li>
+<li><strong>organization</strong> (<em>str</em>) – The user’s organization/company</li>
+<li><strong>roles</strong> (<em>list</em>) – The user’s roles</li>
+<li><strong>privileged</strong> (<em>bool</em>) – true to create a privileged user, false otherwise</li>
+<li><strong>default_cloud</strong> (<em>str</em>) – The user’s default Cloud</li>
+<li><strong>default_keep_running</strong> (<em>'always'</em><em> or </em><em>'never'</em><em> or </em><em>'on-success'</em><em> or </em><em>'on-error'</em>) – The user’s default setting for keep-running.</li>
+<li><strong>ssh_public_keys</strong> (<em>str</em>) – The SSH public keys to inject into deployed instances.
 One key per line.</li>
-<li><strong>log_verbosity</strong> (<em>0 or 1 or 2 or 3</em>) &#8211; The verbosity level of the logging inside instances.
+<li><strong>log_verbosity</strong> (<em>0</em><em> or </em><em>1</em><em> or </em><em>2</em><em> or </em><em>3</em>) – The verbosity level of the logging inside instances.
 0: Actions, 1: Steps, 2: Details, 3: Debugging</li>
-<li><strong>execution_timeout</strong> (<em>int</em>) &#8211; If a deployment stays in a transitionnal state
+<li><strong>execution_timeout</strong> (<em>int</em>) – If a deployment stays in a transitionnal state
 for more than this value (in minutes) it will
 be forcefully terminated.</li>
-<li><strong>usage_email</strong> (<em>'never' or 'daily'</em>) &#8211; Set it to &#8216;daily&#8217; if you want to receive daily email
+<li><strong>usage_email</strong> (<em>'never'</em><em> or </em><em>'daily'</em>) – Set it to ‘daily’ if you want to receive daily email
 with a summary of your Cloud usage of the previous day.</li>
-<li><strong>cloud_parameters</strong> (<em>dict</em>) &#8211; To add Cloud specific parameters (like credentials).
+<li><strong>cloud_parameters</strong> (<em>dict</em>) – To add Cloud specific parameters (like credentials).
 A dict with the cloud name as the key and a dict of parameter as the value.</li>
 </ul>
 </td>
@@ -194,7 +211,7 @@ A dict with the cloud name as the key and a dict of parameter as the value.</li>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> &#8211; The path to a component or an application</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> – The path to a component or an application</td>
 </tr>
 </tbody>
 </table>
@@ -209,27 +226,27 @@ A dict with the cloud name as the key and a dict of parameter as the value.</li>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>path</strong> (<em>str</em>) &#8211; The path of the component/application to deploy</li>
-<li><strong>cloud</strong> (<em>str or dict</em>) &#8211; A string or a dict to specify on which Cloud(s) to deploy the component/application.
+<li><strong>path</strong> (<em>str</em>) – The path of the component/application to deploy</li>
+<li><strong>cloud</strong> (<em>str</em><em> or </em><em>dict</em>) – A string or a dict to specify on which Cloud(s) to deploy the component/application.
 To deploy a component simply specify the Cloud name as a string.
 To deploy a deployment specify a dict with the nodenames as keys and Cloud names as values.
 If not specified the user default cloud will be used.</li>
-<li><strong>parameters</strong> (<em>dict</em>) &#8211; A dict of parameters to redefine for this deployment.
-To redefine a parameter of a node use &#8220;&lt;nodename&gt;&#8221; as keys and dict of parameters as values.
-To redefine a parameter of a component or a global parameter use &#8220;&lt;parametername&gt;&#8221; as the key.</li>
-<li><strong>tags</strong> (<em>str or list</em>) &#8211; List of tags that can be used to identify or annotate a deployment</li>
-<li><strong>keep_running</strong> (<em>'always' or 'never' or 'on-success' or 'on-error'</em>) &#8211; [Only apply to applications] Define when to terminate or not a deployment when it reach the
-&#8216;Ready&#8217; state. Possibles values: &#8216;always&#8217;, &#8216;never&#8217;, &#8216;on-success&#8217;, &#8216;on-error&#8217;.
-If scalable is set to True, this value is ignored and it will behave as if it was set to &#8216;always&#8217;.
+<li><strong>parameters</strong> (<em>dict</em>) – A dict of parameters to redefine for this deployment.
+To redefine a parameter of a node use “&lt;nodename&gt;” as keys and dict of parameters as values.
+To redefine a parameter of a component or a global parameter use “&lt;parametername&gt;” as the key.</li>
+<li><strong>tags</strong> (<em>str</em><em> or </em><em>list</em>) – List of tags that can be used to identify or annotate a deployment</li>
+<li><strong>keep_running</strong> (<em>'always'</em><em> or </em><em>'never'</em><em> or </em><em>'on-success'</em><em> or </em><em>'on-error'</em>) – [Only apply to applications] Define when to terminate or not a deployment when it reach the
+‘Ready’ state. Possibles values: ‘always’, ‘never’, ‘on-success’, ‘on-error’.
+If scalable is set to True, this value is ignored and it will behave as if it was set to ‘always’.
 If not specified the user default will be used.</li>
-<li><strong>scalable</strong> (<em>bool</em>) &#8211; [Only apply to applications] True to start a scalable deployment. Default: False</li>
-<li><strong>multiplicity</strong> (<em>bool</em>) &#8211; [Only apply to applications] A dict to specify how many instances to start per node.
+<li><strong>scalable</strong> (<em>bool</em>) – [Only apply to applications] True to start a scalable deployment. Default: False</li>
+<li><strong>multiplicity</strong> (<em>bool</em>) – [Only apply to applications] A dict to specify how many instances to start per node.
 Nodenames as keys and number of instances to start as values.</li>
-<li><strong>tolerate_failures</strong> (<em>dict</em>) &#8211; [Only apply to applications] A dict to specify how many failures to tolerate per node.
+<li><strong>tolerate_failures</strong> (<em>dict</em>) – [Only apply to applications] A dict to specify how many failures to tolerate per node.
 Nodenames as keys and number of failure to tolerate as values.</li>
-<li><strong>check_ssh_key</strong> (<em>bool</em>) &#8211; Set it to True if you want the SlipStream server to check if you have a public ssh key
+<li><strong>check_ssh_key</strong> (<em>bool</em>) – Set it to True if you want the SlipStream server to check if you have a public ssh key
 defined in your user profile. Useful if you want to ensure you will have access to VMs.</li>
-<li><strong>raw_params</strong> (<em>dict</em>) &#8211; This allows you to pass parameters directly in the request to the SlipStream server.
+<li><strong>raw_params</strong> (<em>dict</em>) – This allows you to pass parameters directly in the request to the SlipStream server.
 Keys must be formatted in the format understood by the SlipStream server.</li>
 </ul>
 </td>
@@ -252,7 +269,7 @@ Keys must be formatted in the format understood by the SlipStream server.</li>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deployment_id</strong> (<em>str or UUID</em>) &#8211; The deployment UUID of the deployment to get</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deployment_id</strong> (<em>str</em><em> or </em><em>UUID</em>) – The deployment UUID of the deployment to get</td>
 </tr>
 </tbody>
 </table>
@@ -266,7 +283,7 @@ Keys must be formatted in the format understood by the SlipStream server.</li>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> (<em>str</em>) &#8211; The path of an element (project/component/application)</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> (<em>str</em>) – The path of an element (project/component/application)</td>
 </tr>
 </tbody>
 </table>
@@ -286,7 +303,7 @@ Keys must be formatted in the format understood by the SlipStream server.</li>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>inactive</strong> &#8211; Include inactive deployments. Default to False</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>inactive</strong> – Include inactive deployments. Default to False</td>
 </tr>
 </tbody>
 </table>
@@ -301,8 +318,8 @@ Keys must be formatted in the format understood by the SlipStream server.</li>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>path</strong> (<em>str</em>) &#8211; The path of a project. If None, list the root project.</li>
-<li><strong>recurse</strong> (<em>bool</em>) &#8211; Get project content recursively</li>
+<li><strong>path</strong> (<em>str</em>) – The path of a project. If None, list the root project.</li>
+<li><strong>recurse</strong> (<em>bool</em>) – Get project content recursively</li>
 </ul>
 </td>
 </tr>
@@ -319,9 +336,9 @@ Keys must be formatted in the format understood by the SlipStream server.</li>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>deployment_id</strong> (<em>str or UUID</em>) &#8211; Retrieve only virtual machines about the specified run_id. Default to None</li>
-<li><strong>offset</strong> &#8211; Retrieve virtual machines starting by the offset&lt;exp&gt;th&lt;/exp&gt; one. Default to 0</li>
-<li><strong>limit</strong> &#8211; Retrieve at most &#8216;limit&#8217; virtual machines. Default to 20</li>
+<li><strong>deployment_id</strong> (<em>str</em><em> or </em><em>UUID</em>) – Retrieve only virtual machines about the specified run_id. Default to None</li>
+<li><strong>offset</strong> – Retrieve virtual machines starting by the offset&lt;exp&gt;th&lt;/exp&gt; one. Default to 0</li>
+<li><strong>limit</strong> – Retrieve at most ‘limit’ virtual machines. Default to 20</li>
 </ul>
 </td>
 </tr>
@@ -337,8 +354,8 @@ Keys must be formatted in the format understood by the SlipStream server.</li>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>username</strong> &#8211; </li>
-<li><strong>password</strong> &#8211; </li>
+<li><strong>username</strong> – </li>
+<li><strong>password</strong> – </li>
 </ul>
 </td>
 </tr>
@@ -359,7 +376,7 @@ Keys must be formatted in the format understood by the SlipStream server.</li>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> &#8211; The path to a component or an application</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> – The path to a component or an application</td>
 </tr>
 </tbody>
 </table>
@@ -373,7 +390,7 @@ Keys must be formatted in the format understood by the SlipStream server.</li>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deployment_id</strong> (<em>str or uuid.UUID</em>) &#8211; The UUID of the deployment to terminate</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deployment_id</strong> (<em>str</em><em> or </em><em>uuid.UUID</em>) – The UUID of the deployment to terminate</td>
 </tr>
 </tbody>
 </table>
@@ -387,7 +404,7 @@ Keys must be formatted in the format understood by the SlipStream server.</li>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> &#8211; The path to a component or an application</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> – The path to a component or an application</td>
 </tr>
 </tbody>
 </table>
@@ -412,6 +429,7 @@ Keys must be formatted in the format understood by the SlipStream server.</li>
 </div>
 
 
+           </div>
           </div>
           <footer>
   
@@ -421,9 +439,10 @@ Keys must be formatted in the format understood by the SlipStream server.</li>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2016, SixSq.
+
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
